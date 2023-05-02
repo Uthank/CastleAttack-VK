@@ -158,6 +158,8 @@
         if (window.innerWidth < window.innerHeight)
             document.getElementById("unity-canvas").style.backgroundImage = "url('Build/Vertical.jpg')"; // ���� � ������ ������������� ����������
     </script>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+  <script> vkBridge.send('VKWebAppInit'); </script>
 </body>
 
 </html>
