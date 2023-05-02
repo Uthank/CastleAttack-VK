@@ -120,9 +120,9 @@
   <script src="Build/Build.loader.js"></script>
   <script>
     const settings = {
-      dataUrl: "Build/c4325360f7de123b46d0bf2976386e01.data.unityweb",
-      frameworkUrl: "Build/8a6583d1959442a80af09d5a5a0f103b.js.unityweb",
-      codeUrl: "Build/2ab51cfebc0c9f199eeb284e0f51017c.wasm.unityweb",
+      dataUrl: "Build/5a74b579e376ffb6118ca9e3a25f7ae6.data.unityweb",
+      frameworkUrl: "Build/c125772030ecdba9f98e4f3ee6e1c6d7.js.unityweb",
+      codeUrl: "Build/3a0e2789c58678bd9c962f81e27bdf8e.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "CastleAttack",
@@ -156,8 +156,10 @@
   </script>
       <script>
         if (window.innerWidth < window.innerHeight)
-            document.getElementById("unity-canvas").style.backgroundImage = "url('Build/Vertical.jpg')"; // ���� � ������ ������������� ����������
+            document.getElementById("unity-canvas").style.backgroundImage = "url('Build/Vertical.jpg')";
     </script>
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+	<script> vkBridge.send('VKWebAppInit'); </script>
 </body>
 
 </html>
