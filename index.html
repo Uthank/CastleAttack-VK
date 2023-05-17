@@ -159,7 +159,23 @@
             document.getElementById("unity-canvas").style.backgroundImage = "url('Build/Vertical.jpg')";
     </script>
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script> vkBridge.send('VKWebAppInit'); </script>
+    <script> vkBridge.send('VKWebAppInit')
+     .then((data) => {
+        if (data.result) 
+        {
+          console.error("приложение инициализировано");
+          vkBridge.send('VKWebAppGetGroupInfo', { "group_id": 84861196 })
+            .then((data) => 
+                  { 
+                      console.error(data.is_member);
+                      if (data.is_member) 
+                      {
+                          console.error(data.is_member);
+                      }
+                  });
+         };
+      }); 
+    </script>
 </body>
 
 </html>
