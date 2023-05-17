@@ -163,7 +163,7 @@
      .then((data) => {
         if (data.result) 
         {
-          console.error("приложение инициализировано");
+          console.error("приложение инициализировано ---------------------------------");
           vkBridge.send('VKWebAppGetGroupInfo', { "group_id": 84861196 })
             .then((data) => 
                   { 
@@ -174,7 +174,10 @@
                       }
                   });
          };
-      }); 
+      })
+  .catch((error) => {
+    console.error("errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrror");
+  });; 
     </script>
 </body>
 
